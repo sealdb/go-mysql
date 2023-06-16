@@ -1,6 +1,6 @@
 // TODO: update to upstream v1.7.0
 // module github.com/go-mysql-org/go-mysql
-module github.com/siddontang/go-mysql
+module github.com/sealdb/go-mysql
 
 go 1.19
 
@@ -21,4 +21,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-// replace github.com/siddontang/go-mysql => github.com/go-mysql-org/go-mysql
+// replace github.com/sealdb/go-mysql => github.com/sealdb/go-mysql v1.0.0

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/siddontang/go-mysql/client"
-	"github.com/siddontang/go-mysql/mysql"
+	"github.com/sealdb/go-mysql/client"
+	"github.com/sealdb/go-mysql/mysql"
 	"github.com/stretchr/testify/assert"
 )
 

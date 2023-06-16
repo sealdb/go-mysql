@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/siddontang/go-mysql/mysql"
+	"github.com/sealdb/go-mysql/mysql"
 	"github.com/stretchr/testify/assert"
 )
 

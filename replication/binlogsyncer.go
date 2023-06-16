@@ -13,8 +13,8 @@ import (
 	"github.com/juju/errors"
 	uuid "github.com/satori/go.uuid"
 	"github.com/siddontang/go-log/log"
-	"github.com/siddontang/go-mysql/client"
-	. "github.com/siddontang/go-mysql/mysql"
+	"github.com/sealdb/go-mysql/client"
+	. "github.com/sealdb/go-mysql/mysql"
 )
 
 var (

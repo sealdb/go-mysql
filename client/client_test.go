@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/juju/errors"
-	"github.com/siddontang/go-mysql/mysql"
-	"github.com/siddontang/go-mysql/test_util/test_keys"
+	"github.com/sealdb/go-mysql/mysql"
+	"github.com/sealdb/go-mysql/test_util/test_keys"
 	"github.com/stretchr/testify/assert"
 )
 

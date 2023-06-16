@@ -11,8 +11,8 @@ import (
 	"time"
 
 	uuid "github.com/satori/go.uuid"
-	"github.com/siddontang/go-mysql/client"
-	"github.com/siddontang/go-mysql/mysql"
+	"github.com/sealdb/go-mysql/client"
+	"github.com/sealdb/go-mysql/mysql"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -130,8 +130,8 @@ func testSync(t *testing.T, s *BinlogStreamer, syn *testSyncerSuite) {
 	testExecute(t, "DROP TABLE IF EXISTS test_json_v2", syn)
 
 	str = `CREATE TABLE test_json_v2 (
-			id INT, 
-			c JSON, 
+			id INT,
+			c JSON,
 			PRIMARY KEY (id)
 			) ENGINE=InnoDB`
 
@@ -208,20 +208,20 @@ func testSync(t *testing.T, s *BinlogStreamer, syn *testSyncerSuite) {
 	// Must allow zero time.
 	testExecute(t, `SET sql_mode=''`, syn)
 	str = `CREATE TABLE test_parse_time (
-			a1 DATETIME, 
-			a2 DATETIME(3), 
-			a3 DATETIME(6), 
-			b1 TIMESTAMP, 
-			b2 TIMESTAMP(3) , 
+			a1 DATETIME,
+			a2 DATETIME(3),
+			a3 DATETIME(6),
+			b1 TIMESTAMP,
+			b2 TIMESTAMP(3) ,
 			b3 TIMESTAMP(6))`
 	testExecute(t, str, syn)
 
 	testExecute(t, `INSERT INTO test_parse_time VALUES
-		("2014-09-08 17:51:04.123456", "2014-09-08 17:51:04.123456", "2014-09-08 17:51:04.123456", 
+		("2014-09-08 17:51:04.123456", "2014-09-08 17:51:04.123456", "2014-09-08 17:51:04.123456",
 		"2014-09-08 17:51:04.123456","2014-09-08 17:51:04.123456","2014-09-08 17:51:04.123456"),
 		("0000-00-00 00:00:00.000000", "0000-00-00 00:00:00.000000", "0000-00-00 00:00:00.000000",
 		"0000-00-00 00:00:00.000000", "0000-00-00 00:00:00.000000", "0000-00-00 00:00:00.000000"),
-		("2014-09-08 17:51:04.000456", "2014-09-08 17:51:04.000456", "2014-09-08 17:51:04.000456", 
+		("2014-09-08 17:51:04.000456", "2014-09-08 17:51:04.000456", "2014-09-08 17:51:04.000456",
 		"2014-09-08 17:51:04.000456","2014-09-08 17:51:04.000456","2014-09-08 17:51:04.000456")`, syn)
 
 	syn.wg.Wait()

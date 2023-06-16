@@ -12,7 +12,7 @@ import (
 	"github.com/juju/errors"
 	"github.com/shopspring/decimal"
 	"github.com/siddontang/go-log/log"
-	. "github.com/siddontang/go-mysql/mysql"
+	. "github.com/sealdb/go-mysql/mysql"
 	"github.com/siddontang/go/hack"
 )
 
